@@ -41,8 +41,8 @@ export default function LoginScreen({navigation}) {
             if (type == 'success') {
               const { email, name, photoUrl } = user;
               handleMessage('Google signin successful', 'SUCCESS');
-              console.log(name)
-              setTimeout(() => navigation.navigate('Welcome'), 1000);
+              console.log(user)
+              setTimeout(() => navigation.navigate('Welcome',{user}), 1000);
             } else {
               handleMessage('Google Signin was cancelled');
             }
