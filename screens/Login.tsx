@@ -12,7 +12,7 @@ import * as Google from 'expo-google-app-auth';
 import Navigation from '../navigation';
 
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
 
     const [hidePassword, setHidePassword] = useState(true);
     const [message, setMessage] = useState();
@@ -41,7 +41,8 @@ export default function LoginScreen() {
             if (type == 'success') {
               const { email, name, photoUrl } = user;
               handleMessage('Google signin successful', 'SUCCESS');
-              setTimeout(() => Navigation.navigate('Welcome', { email, name, photoUrl }), 1000);
+              console.log(name)
+              setTimeout(() => navigation.navigate('Welcome'), 1000);
             } else {
               handleMessage('Google Signin was cancelled');
             }
