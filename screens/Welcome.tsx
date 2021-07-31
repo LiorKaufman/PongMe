@@ -12,7 +12,7 @@ import * as Google from 'expo-google-app-auth';
 import Navigation from '../navigation';
 
 
-export default function WelcomeScreen({user,navigation}:{user:any,navigation:any} ) {
+export default function WelcomeScreen({route,navigation}:{route:any,navigation:any} ) {
 
     
     
@@ -21,11 +21,11 @@ export default function WelcomeScreen({user,navigation}:{user:any,navigation:any
     <View style={styles.container}>
       <Text style={styles.title}>Welcome!</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text>{JSON.stringify(user)}</Text>
+      <Text>{JSON.stringify(route.params.user)}</Text>
        
 
     <Button
-  onPress={() => setTimeout(() => navigation.navigate('TabOne',{user}), 1000)}
+  onPress={() => setTimeout(() => navigation.navigate('TabOne'), 1000)}
   title="TabOne"
   color="#841584"
   

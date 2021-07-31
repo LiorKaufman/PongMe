@@ -32,7 +32,7 @@ export default function LoginScreen({navigation}) {
           iosClientId: `304425060222-frnlalsf9v83pio14m8oked103jq87vg.apps.googleusercontent.com`,
           androidClientId: `304425060222-q63ea7dpakhd7eopa3qobpt17lub6ffa.apps.googleusercontent.com`,
           clientId: `304425060222-hdbdqfr93megnc2ug2g4tfiqajbahpnq.apps.googleusercontent.com`,
-          scopes: ['profile', 'email'],
+          scopes: ['profile', 'email', 'phone'],
         };
     
         Google.logInAsync(config)
