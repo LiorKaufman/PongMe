@@ -34,7 +34,7 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login!' }} />
-      <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ title: 'Welcome!' }} />   
+      <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ title: 'Welcome!'}} />   
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
